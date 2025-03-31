@@ -6,8 +6,8 @@ import { NavTabs } from "@/components/layout/nav-tabs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Magma - DeFi Vaults",
-  description: "High-yield DeFi vaults platform",
+  title: "Magma hyperliquid vaults",
+  description: "",
 };
 
 export default function RootLayout({
