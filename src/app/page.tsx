@@ -43,20 +43,20 @@ export default function Home() {
 
   return (
     <>
-      <Card className="bg-black/50 border-zinc-800 p-6 mb-8 w-fit mx-auto">
+      <Card className="bg-black/50 border-zinc-800 p-6 mb-8 mx-auto">
         <div className="text-center">
-          <div className="text-zinc-400 mb-2">Total Value Locked:</div>
+          <h2 className="text-xl font-bold text-[#A1FFCE] mb-2">Total Value Locked</h2>
           <div className="text-4xl font-bold text-[#A1FFCE]">$500,243,312</div>
         </div>
       </Card>
 
       <Card className="bg-black/50 border-zinc-800 p-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-semibold text-[#A1FFCE]">Vaults</h2>
+          <h2 className="text-xl font-bold text-[#A1FFCE]">Vaults</h2>
           <div className="relative">
             <Input
               placeholder="Search vaults..."
-              className="w-64 bg-black/50 border-zinc-800 text-zinc-400 focus:border-[#A1FFCE]"
+              className="w-56 bg-black/50 border-zinc-800 text-zinc-400 focus:border-[#A1FFCE] rounded-none px-2 py-1"
             />
           </div>
         </div>
@@ -100,6 +100,10 @@ export default function Home() {
             ))}
           </TableBody>
         </Table>
+        
+        <div className="mt-8 text-center text-zinc-500 text-sm">
+          MAGMA 2025
+        </div>
       </Card>
     </>
   );

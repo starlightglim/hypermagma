@@ -68,7 +68,7 @@
     --border: 240 4% 16%;
     --input: 240 4% 16%;
     --ring: 151 100% 82%;
-    --radius: 0.75rem;
+    --radius: 0rem;
   }
 }
 
@@ -77,6 +77,53 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+  }
+}
+
+@layer components {
+  .monospace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1ch);
+    grid-auto-rows: 1.5em;
+    font-family: monospace;
+    line-height: 1.5;
+    white-space: pre;
+    letter-spacing: 0;
+  }
+  
+  .monospace-card {
+    @apply border-zinc-800 font-mono p-4 border;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 80ch;
+  }
+  
+  .monospace-table {
+    @apply font-mono text-base;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .monospace-table th,
+  .monospace-table td {
+    @apply p-1 border-zinc-800;
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+  .monospace-button {
+    @apply font-mono bg-transparent border border-zinc-800 text-[#A1FFCE] px-2 py-0;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .monospace-button:hover {
+    @apply bg-[#A1FFCE]/10;
+  }
+  
+  .ascii-box {
+    @apply font-mono text-[#A1FFCE] whitespace-pre;
   }
 }
